@@ -23,12 +23,6 @@ interface ProductItemProps {
 export function ProductItemComponent({ product, onAddToWishList }: ProductItemProps) {
   const [isAddingToWishList, setIsAddingToWishList] = useState(false);
   
-  async function showFormattedDate() {
-    const { format } = await import('date-fns')
-
-    format() 
-  }
-
   return (
     <div>
       {product.title} - <strong>{product.priceFormatted}</strong>
